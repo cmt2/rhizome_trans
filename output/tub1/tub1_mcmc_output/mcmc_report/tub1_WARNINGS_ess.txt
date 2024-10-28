@@ -1,0 +1,3 @@
+param_or_gene	ESS
+s0	155.91
+tau	137.15

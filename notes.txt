@@ -1,0 +1,22 @@
+Meeting with Ammon about mcmc issues 11 Oct. 2022
+
+mixture model is non-identifiable 
+two alternative ways to fit components to data:
+	high variance & low variance (this is finding that the lowest-count genes are more likely to be expressed than not-expressed)
+	high mean & low mean 
+
+solution: 
+	for both tissues: 
+	Change variance prior (uniform between upper and lower)
+	Also change threshold_a = "" to a vector of values for the minimum limits
+	active_variance_prior_max = 3.5
+	threshold_a = c(0,3.5)
+	
+
+Isoform-specific expression patterns? 
+Try both isoform-level and gene-level
+
+below 50% chance of being expressed = throw out 
+
+Old runs moved into "original_runs." These use default settings for the prior variance
+
